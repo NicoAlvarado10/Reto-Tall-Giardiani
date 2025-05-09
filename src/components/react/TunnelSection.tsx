@@ -97,7 +97,7 @@ export default function TunnelSection() {
 							  </span>
 				    </h3>
 
-              <p className="text-white text-center mt-4 text-2xl">{item.desc}</p>
+              <p className="text-white text-center mt-4 text-2xl max-sm:text-xl">{item.desc}</p>
             </div>
           ))}
         </div>
