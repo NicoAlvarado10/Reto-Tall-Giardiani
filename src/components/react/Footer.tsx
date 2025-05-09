@@ -6,9 +6,9 @@ const Footer = () => {
     <section className='flex flex-col p-10 max-sm:p-5 lg:p-20 lg:pb-10  bg-gradient-to-r from-black via-gray-950 to-black '>
       <div className='max-w-[1700px] mx-auto w-full'>
       <div className='lg:flex justify-between items-center   '>
-        <h2 className='text-5xl max-sm:text-4xl font-bold py-5 md:w-[450px]  max-sm:text-center'>¿Listo para transformar tu negocio?</h2>
+        <h2 className='text-5xl max-sm:text-3xl font-bold py-5 md:w-[450px]  max-sm:text-center max-sm:w-full'>¿Listo para transformar tu negocio?</h2>
         <div className='lg:flex flex-col justify-center '>
-          <p className='font-medium pb-5 md:w-[450px] max-sm:text-center'>Estamos aquí para ayudarte a escalar, automatizar y lograr resultados reales. ¡Conversemos!</p>
+          <p className='font-medium pb-5 md:w-[450px] max-sm:text-center max-sm:'>Estamos aquí para ayudarte a escalar, automatizar y lograr resultados reales. ¡Conversemos!</p>
           <div className='pb-20 lg:pb-10 max-sm:pb-8'>
           <a
 						href="#get-started"
