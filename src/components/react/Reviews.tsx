@@ -1,6 +1,7 @@
 import React from 'react'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { useRef } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { GoArrowLeft, GoArrowRight, GoStarFill } from "react-icons/go"
@@ -57,6 +58,9 @@ const reviews = [
 ]
 
 const Reviews = () => {
+
+    const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <div className="w-full mt-10 px-10 py-20 max-sm:p-5 overflow-hidden">
       <div className="pb-20 max-w-[1700px] mx-auto">
@@ -86,7 +90,10 @@ const Reviews = () => {
             '@1.00': { slidesPerView: 3, spaceBetween: 10 },
             '@1.50': { slidesPerView: 3, spaceBetween: 30 },
           }}
-          navigation={true}
+           navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
           modules={[Navigation]}
         >
           {reviews.map((review, index) => (
@@ -114,10 +121,14 @@ const Reviews = () => {
       </div>
 
       <div className="my-10 w-full item-center justify-center flex gap-20">
-        <div className="cursor-pointer w-[50px] h-[50px] bg-transparent rounded-full flex items-center justify-center border-[#ffffff] border-[1.5px] fade-up">
+        <div
+        ref={prevRef}
+         className="cursor-pointer w-[50px] h-[50px] bg-transparent rounded-full flex items-center justify-center border-[#ffffff] border-[1.5px] fade-up">
           <GoArrowLeft className="size-5" />
         </div>
-        <div className="cursor-pointer w-[50px] h-[50px] bg-transparent rounded-full flex items-center justify-center border-[#ffffff] border-[1.5px] fade-up">
+        <div
+        ref={nextRef}
+        className="cursor-pointer w-[50px] h-[50px] bg-transparent rounded-full flex items-center justify-center border-[#ffffff] border-[1.5px] fade-up">
           <GoArrowRight className="size-5" />
         </div>
       </div>
