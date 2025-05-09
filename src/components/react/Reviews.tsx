@@ -88,7 +88,7 @@ const Reviews = () => {
         gsap.from(split.chars, {
           scrollTrigger: {
             trigger: title1.current,
-            start: 'top 80%',
+            start: 'top 100%',
             end: 'top 20%',
             scrub: true,
             markers: false,
@@ -156,7 +156,7 @@ const Reviews = () => {
   }
 
   return (
-    <div className=" w-full px-10 py-20 max-sm:p-5 overflow-hidden">
+    <div className=" w-full mt-10 px-10 py-20 max-sm:p-5 overflow-hidden">
       <div className='pb-20  max-w-[1700px] mx-auto'>
         <h3 className='text-lg'>Confiado por <span className='text-purple-600 font-bold'>1200+</span> compañías</h3>
         <h2 ref={title1} className='pb-10 text-4xl w-[100%] py-3 font-bold md:text-7xl max-sm:text-3xl xl:w-[60%] md:text-[#ffffff]'>No confíe de nuestra palabra, vea lo que dicen nuestros clientes</h2>
