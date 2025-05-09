@@ -2,7 +2,7 @@ import type React from "react"
 
 const ModelSection: React.FC = () => {
   return (
-    <section className="py-20 px-4 md:px-16 lg:px-24">
+    <section className=" py-20 px-4 md:px-16 lg:px-24">
       <h2 className="text-white text-4xl font-bold mb-16">Nuestro modelo</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
