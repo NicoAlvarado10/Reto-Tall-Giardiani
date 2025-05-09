@@ -71,8 +71,8 @@ const ModelSection = () => {
 
 
   return (
-    <section className='mt-[110vh] max-2xl:mt-[100vh] p-10 py-20 max-sm:p-5 flex flex-col gap-10 justify-center items-center '>
-      <h2 className='text-5xl font-medium max-sm:text-3xl'>Así diseñamos embudos que realmente convierten</h2>
+    <section className='mt-[110vh] max-2xl:mt-[100vh] p-10 py-24 max-sm:p-5 flex flex-col gap-10 justify-center items-center '>
+      <h2 className='text-5xl font-medium max-sm:text-3xl mt-5 max-sm:text-center'>Así diseñamos embudos que realmente convierten</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-[1700px]
       ">
       <article ref={card1} className='group  p-10 max-sm:p-5 flex flex-col gap-4 justify-between   bg-[#101216] rounded-xl w-full'>
