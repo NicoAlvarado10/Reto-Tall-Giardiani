@@ -159,10 +159,10 @@ const InfiniteMarqueeComponent = () => {
   // }, []);
 
   return (
-    <div className='py-20 flex flex-col items-center w-[100vw] overflow-x-hidden'>
-      <h2 className="p-5 text-4xl pb-20 text-center text-white w-full lg:w-[50%]">Trabajamos con marcas que usan las <span className='underline decoration-[#d140f6ee]'>mejores herramientas</span> del mercado</h2>
+    <section className='py-20 flex flex-col items-center w-[100vw] overflow-x-hidden'>
+      <h2 className="p-5 text-4xl pb-20 text-center text-white 2xl:max-w-[40%]">Trabajamos con marcas que usan las <span className='underline decoration-[#d140f6ee]'>mejores herramientas</span> del mercado</h2>
       <div>
-        <div className="relative h-min" ref={logosWrapper}>
+        <div className="relative h-min " ref={logosWrapper}>
           <div
             className='w-[100%] h-[100%] absolute z-10 top-0 left-0'
             style={{
@@ -182,7 +182,7 @@ const InfiniteMarqueeComponent = () => {
         </div>
 
       </div>
-    </div>
+    </section>
 
   )
 }
