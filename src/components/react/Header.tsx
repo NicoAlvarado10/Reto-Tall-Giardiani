@@ -57,7 +57,7 @@ const Header = () => {
 			ref={headerRef}
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
-			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-r from-black via-gray-950 to-black
+			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-b from-black via-gray-950 to-black
 				${scrolled ? "py-2" : "py-4"} px-4 sm:px-6 md:px-8 lg:px-16`}
 			
 		>
@@ -96,7 +96,7 @@ const Header = () => {
 						{[
 							{ href: "#services", label: "Servicios", hasDropdown: true },
 							{ href: "#exito", label: "Modelo de Éxito", hasDropdown: false },
-							{ href: "#about", label: "Nosotros", hasDropdown: false }
+							{ href: "#testimony", label: "Testimonios", hasDropdown: false }
 						].map((item) => (
 							<div key={item.href} className="relative group perspective">
 								<a 

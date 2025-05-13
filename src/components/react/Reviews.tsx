@@ -1,10 +1,11 @@
-import React from 'react'
+
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { useRef } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { GoArrowLeft, GoArrowRight, GoStarFill } from "react-icons/go"
+import { motion } from 'framer-motion'
 
 const reviews = [
   {
@@ -62,21 +63,39 @@ const Reviews = () => {
     const prevRef = useRef(null)
   const nextRef = useRef(null)
   return (
-    <div className="w-full mt-10 px-10 py-20 max-sm:p-5 overflow-hidden">
+    <section className="w-full mt-10 px-10 py-20 max-sm:p-5 overflow-hidden" id='testimony'>
       <div className="pb-20 max-w-[1700px] mx-auto">
-        <h3 className="text-lg fade-up">
+        <motion.h3 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8}}
+        className="text-lg fade-up">
+          
           Confiado por <span className="text-purple-600 font-bold">1200+</span> compañías
-        </h3>
-        <h2 className="pb-10 text-4xl w-full py-3 font-bold md:text-7xl max-sm:text-3xl xl:w-[60%]  md:text-[#ffffff] fade-up">
+        </motion.h3>
+        <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2}}
+        className="pb-10 text-4xl w-full py-3 font-bold md:text-7xl max-sm:text-3xl xl:w-[60%]  md:text-[#ffffff] ">
           No confíe de nuestra palabra, vea lo que dicen nuestros clientes
-        </h2>
-        <p className="text-white/80 md:w-[60%] text-xl text-[#a1a1a1] fade-up ">
+        </motion.h2>
+       
+        <motion.p
+         initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4}}
+        className="text-white/80 md:w-[60%] text-xl text-[#a1a1a1] fade-up ">
           Nos enorgullece trabajar con empresas de todos los tamaños, desde startups hasta corporaciones reconocidas.
           Nuestro compromiso con la calidad y la atención al cliente ha generado relaciones duraderas.
-          <span className="pt-3 pb-10 block text-white font-medium">
+          <motion.span
+           initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6}}
+          className="pt-3 pb-10 block text-white font-medium">
             Descubre cómo hemos ayudado a otros a alcanzar sus metas.
-          </span>
-        </p>
+          </motion.span>
+        </motion.p>
       </div>
 
       <div className="max-w-[1700px] mx-auto">
@@ -132,7 +151,7 @@ const Reviews = () => {
           <GoArrowRight className="size-5" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

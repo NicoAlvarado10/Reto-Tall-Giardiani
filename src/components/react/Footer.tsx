@@ -1,9 +1,9 @@
-import React from 'react'
+
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
-    <section className='flex flex-col p-10 max-sm:p-5 lg:p-20 lg:pb-10  bg-gradient-to-r from-black via-gray-950 to-black '>
+    <section className='flex flex-col p-10 max-sm:p-5 lg:p-20 lg:pb-10  bg-gradient-to-t from-black  '>
       <div className='max-w-[1700px] mx-auto w-full'>
       <div className='lg:flex justify-between items-center   '>
         <h2 className='text-5xl max-sm:text-3xl font-bold py-5 md:w-[450px]  max-sm:text-center max-sm:w-full'>¿Listo para transformar tu negocio?</h2>

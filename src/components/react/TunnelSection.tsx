@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import BlurText from "./BlurText";
+import { motion } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const problems = [
@@ -88,16 +89,29 @@ export default function TunnelSection() {
             <div
               key={i}
               className="min-w-[100vw]  h-full
-                         bg-gradient-to-r from-black via-gray-950 to-black
+                         bg-gradient-to-b from-black 
                          shadow-lg p-10 flex flex-col justify-center items-center "
             >
-              <h3 className="text-4xl sm:text-5xl text-center md:text-6xl lg:text-6xl font-bold text-white leading-tight overflow-hidden">
-							  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 animate-gradient-x">
-                  {item.title}
-							  </span>
-				    </h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-tight overflow-hidden text-center">
+  <BlurText
+    className="
+      bg-gradient-to-r
+      from-blue-400 via-purple-500 to-blue-400
+      bg-clip-text text-transparent
+      animate-gradient-x 
+    "
+    text={item.title}
+    delay={150}
+    animateBy="words"
+    direction="top"
+  />
+</h3>
 
-              <p className="text-white text-center mt-4 text-2xl max-sm:text-xl">{item.desc}</p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4}}
+              className="text-white text-center mt-4 text-2xl max-sm:text-xl">{item.desc}</motion.p>
             </div>
           ))}
         </div>

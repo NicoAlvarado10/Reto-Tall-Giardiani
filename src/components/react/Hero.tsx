@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, MoveRight } from "lucide-react";
-
+import GradientText from "./GradientText";
 const Hero: React.FC = () => {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const sectionRef = useRef<HTMLElement>(null);
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
 	return (
 		<section 
 			ref={sectionRef}
-			className="relative flex flex-col items-center justify-center min-h-screen py-20 px-5 md:px-16 lg:px-24 overflow-hidden bg-gradient-to-r from-black via-gray-950 to-black"
+			className="relative flex flex-col items-center justify-center min-h-screen py-20 px-5 md:px-16 lg:px-24 overflow-hidden bg-gradient-to-b from-black  "
 			
 		>
 			
@@ -42,10 +42,16 @@ const Hero: React.FC = () => {
 
 					{/* Second line */}
 					<div className="overflow-hidden mt-2">
-						<span className={`inline-block transition-transform duration-700 delay-500 ${isLoaded ? 'transform-none' : 'translate-y-full'}`}>
-							<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 animate-gradient-x">
-								Embudos de Venta Efectivos
-							</span>
+						<span className={`inline-block transition-transform  duration-700 delay-500 ${isLoaded ? 'transform-none' : 'translate-y-full'}`}>
+							
+							<GradientText
+  								  colors={['#2563EB', '#8B5CF6', '#2563EB']}
+  								animationSpeed={4}
+  								showBorder={false}
+  								className="custom-class"
+								>
+  									Embudos de Venta Efectivos
+								</GradientText>
 						</span>
 					</div>
 				</h1>
