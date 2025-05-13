@@ -1,5 +1,5 @@
 /* src/styles/global.css or src/assets/global.css */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,28 +13,76 @@
 html,body{
     scroll-behavior: smooth;
 }
-.tunnelSection-title1 {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+
+
+
+
+
+.animated-gradient-text {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  max-width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  /* 20px */
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.5s ease-out;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.tunnelSection-title1.char {
-    transform: translateY(115px) !important;
-    transition: transform 0.5s;
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 300% 100%;
+  animation: gradient linear infinite;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
 }
 
-@keyframes fadeUp {
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+@keyframes gradient {
   0% {
-    opacity: 0;
-    transform: translateY(30px);
+    background-position: 0% 50%;
   }
-  50%,100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.fade-up {
-  animation: fadeUp 0.6s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+.text-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient linear infinite;
 }
