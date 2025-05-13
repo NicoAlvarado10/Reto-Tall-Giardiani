@@ -1,19 +1,14 @@
 import gsap from "gsap"
-import CallToAction from "./CTA"
 import Footer from "./Footer"
-
 import Header from "./Header"
 import Hero from "./Hero"
 import InfiniteMarqueeComponent from "./InfiniteMarquee"
-import InfiniteMarquee from "./InfiniteMarquee"
 import ModelSection from "./ModelSection"
-// import ModelSection from "./ModelSelection"
 import Reviews from "./Reviews"
-import Testimonial from "./Testimonial"
 import TunnelSection from "./TunnelSection"
 import { ReactLenis, useLenis } from 'lenis/react'
 import { useEffect, useRef } from "react"
-import FunnelSelection from "./FunnelSelection"
+
 
 export const App = () => {
   const cursorRef = useRef<HTMLDivElement>(null)
@@ -70,7 +65,7 @@ export const App = () => {
 
   return (
     <ReactLenis root>
-      <div className="overflow-hidden relative" style={{ backgroundColor: "#0a0a0a", color: "white" }}>
+      <main className="overflow-hidden relative" style={{ backgroundColor: "#0a0a0a", color: "white" }}>
         <div ref={cursorRef} className="pointer fixed top-0 left-0 w-[6px] h-[6px] bg-white rounded-full pointer-events-none z-[9999]"
         ></div>
         <Header />
@@ -81,10 +76,9 @@ export const App = () => {
 
         <Reviews />
         <Footer />
-        {/* <Testimonial /> */}
-        {/* <ModelSection /> */}
-        {/* <CallToAction /> */}
-      </div>
+  
+        
+      </main>
     </ReactLenis>
   )
 }
